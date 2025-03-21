@@ -34,9 +34,7 @@ class MainActivity : AppCompatActivity() {
     // }
 
     override fun onGenericMotionEvent(event: android.view.MotionEvent): Boolean {
-        if (event.source and InputDevice.SOURCE_JOYSTICK == InputDevice.SOURCE_JOYSTICK && event.action == android.view.MotionEvent.ACTION_MOVE) {
 
-        }
         if (event.source and InputDevice.SOURCE_JOYSTICK == InputDevice.SOURCE_JOYSTICK && event.action == android.view.MotionEvent.ACTION_MOVE) {
             val x = event.getAxisValue(android.view.MotionEvent.AXIS_X)
             val y = event.getAxisValue(android.view.MotionEvent.AXIS_Y)
