@@ -13,7 +13,7 @@ import android.view.MotionEvent
 import android.view.InputDevice
 
 
-private val MainActivity.InputDevice.Companion.SOURCE_JOYSTICK: Int
+private val MainActivity.InputDevice.Companion.SOURCE_SENSOR: Int
     get() {
         val i = 0
         return i
@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onGenericMotionEvent(event: android.view.MotionEvent): Boolean {
 
-        if (event.source and InputDevice.SOURCE_JOYSTICK == InputDevice.SOURCE_JOYSTICK && event.action == android.view.MotionEvent.ACTION_MOVE) {
+        if (event.source and InputDevice.SOURCE_SENSOR == InputDevice.SOURCE_SENSOR && event.action == android.view.MotionEvent.ACTION_MOVE) {
             val x = event.getAxisValue(android.view.MotionEvent.AXIS_X)
             val y = event.getAxisValue(android.view.MotionEvent.AXIS_Y)
 
